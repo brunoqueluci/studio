@@ -11,7 +11,7 @@ function login($VerificaLogin, $dadosLogin)
     if (!empty($usuario)){
        // -session_start();
         sessao($usuario);
-        header("Location: \studio\home.php");
+        header("Location: \studio\sitemanutecao.php");
         echo "<br>Parabens " . $usuario['nome']. " esta logado e seu id é: " . $usuario['id'];
     } else {
         header("Location: \studio\Errologin.php");
