@@ -9,7 +9,7 @@ function login($VerificaUsuarioLogin, $dadosLogin)
 {
     $usuario = $VerificaUsuarioLogin->verificaLogin($dadosLogin->dadosLogin());
     if (!empty($usuario)){
-       // session_start();
+       // -session_start();
         sessao($usuario);
         header("Location: \studio\home.php");
         echo "<br>Parabens " . $usuario['nome']. " esta logado e seu id é: " . $usuario['id'];
