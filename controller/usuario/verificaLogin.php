@@ -1,7 +1,7 @@
 <?php
 include("C:\wamp64\www\studio\model\ConectaBd.php");
 
-class VerificaUsuarioLogin extends ConectaBd
+class verificaLogin extends ConectaBd
 {
     public function verificaLogin($dados)
     {

@@ -1,21 +1,20 @@
 <?php
-include("C:\wamp64\www\studio\controller\VerificaUsuarioLogin.php");
+include("C:\wamp64\www\studio\controller\usuario\VerificaLogin.php");
 include("C:\wamp64\www\studio\controller\DadosLogin.php");
 
 $dadosLogin = new DadosLogin;
-$VerificaUsuarioLogin = new VerificaUsuarioLogin;
+$VerificaLogin = new verificaLogin;
 
-function login($VerificaUsuarioLogin, $dadosLogin)
+function login($VerificaLogin, $dadosLogin)
 {
-    $usuario = $VerificaUsuarioLogin->verificaLogin($dadosLogin->dadosLogin());
+    $usuario = $VerificaLogin->verificaLogin($dadosLogin->dadosLogin());
     if (!empty($usuario)){
        // -session_start();
         sessao($usuario);
         header("Location: \studio\home.php");
         echo "<br>Parabens " . $usuario['nome']. " esta logado e seu id é: " . $usuario['id'];
     } else {
-       
-        header("Location: \studio\index.html");
+        header("Location: \studio\Errologin.php");
     }
 }
 
@@ -28,7 +27,7 @@ function sessao($dados)
     return $_SESSION;
 }
 
-login($VerificaUsuarioLogin, $dadosLogin);
+login($VerificaLogin, $dadosLogin);
 
 var_dump($dadosLogin->dadosLogin());
 ?>
