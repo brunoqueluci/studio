@@ -1,3 +1,4 @@
+<?php require_once("C:\wamp64\www\studio\controller\Restrito.php");?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -14,7 +15,7 @@
         <hr>
         <h4>Sistema sendo criado, aguarde, em breve será finalizado.</h4>
         <h4>
-            <?php session_start();
+            <?php 
             echo "Usuario logado " . $_SESSION["nome"] . " Esta logado e seu id é " . $_SESSION["id"];
             ?>
         </h4>
