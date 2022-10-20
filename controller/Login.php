@@ -1,51 +1,24 @@
 <?php
-include("C:\wamp64\www\studio\controller\usuario\VerificaUsuario.php");
+include("C:\wamp64\www\studio\controller\usuario\ConsultaUsuario.php");
 include("C:\wamp64\www\studio\controller\DadosLogin.php");
-include("C:\wamp64\www\studio\controller\Logout.php");
+//include("C:\wamp64\www\studio\controller\Logout.php");
+include("C:\wamp64\www\studio\controller\usuario\Sessao.php");
 
 $dadosLogin = new DadosLogin;
 $ConsultaUsuario = new ConsultaUsuario;
-$Logout = new Logout;
+$Sessao = new Sessao;
+session_start();
 
-function login($ConsultaUsuario, $dadosLogin)
+function login($ConsultaUsuario, $dadosLogin, $Sessao)
 {
     $usuario = $ConsultaUsuario->consultaUsuario($dadosLogin->dadosLogin());
     if (!empty($usuario)){
-        //fechaSessao();
-        session_start();
-        session_unset();
-        sessao($usuario);
         
-        //var_dump($_SESSION);
+        $Sessao->dadosSessao($usuario);
         header("Location: \studio\home.php");
-        //echo "<br>Parabens " . $usuario['nome']. " esta logado e seu id é: " . $usuario['id'];
     } else {
         header("Location: \studio\Errologin.php");
     }
 }
-
-function fechaSessao()
-{
-    if (session_status() == PHP_SESSION_ACTIVE || session_status() == true)
-    {
-        session_unset();
-        session_destroy();
-    }
-    
-}
-
-function sessao($dados_banco)
-{
-    //id, nome, email, senha, data_cadastro, status (Campos do banco);
-    
-    $_SESSION['id'] = $dados_banco["id"];
-    $_SESSION['nome'] = $dados_banco["nome"];
-    $_SESSION['status'] = $dados_banco["status"];
-   
-    return $_SESSION;
-}
-
-login($ConsultaUsuario, $dadosLogin);
-
-//var_dump(sessao($dados['email']));
+login($ConsultaUsuario, $dadosLogin, $Sessao);
 ?>
