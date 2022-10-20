@@ -1,11 +1,11 @@
 <?php
 include("C:\wamp64\www\studio\controller\usuario\VerificaUsuario.php");
 include("C:\wamp64\www\studio\controller\DadosLogin.php");
-//include("C:\wamp64\www\studio\model\dadossessao.php");
+include("C:\wamp64\www\studio\controller\Logout.php");
 
 $dadosLogin = new DadosLogin;
 $ConsultaUsuario = new ConsultaUsuario;
-//$dadossessao = new dadossessao;
+$Logout = new Logout;
 
 function login($ConsultaUsuario, $dadosLogin)
 {
@@ -17,7 +17,7 @@ function login($ConsultaUsuario, $dadosLogin)
         sessao($usuario);
         
         //var_dump($_SESSION);
-        header("Location: \studio\sitemanutecao.php");
+        header("Location: \studio\home.php");
         //echo "<br>Parabens " . $usuario['nome']. " esta logado e seu id é: " . $usuario['id'];
     } else {
         header("Location: \studio\Errologin.php");
@@ -45,7 +45,7 @@ function sessao($dados_banco)
     return $_SESSION;
 }
 
-login($VerificaLogin, $dadosLogin);
+login($ConsultaUsuario, $dadosLogin);
 
 //var_dump(sessao($dados['email']));
 ?>
