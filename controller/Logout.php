@@ -1,19 +1,6 @@
 <?php
-class Logout
-{
-    function logout()
-    {
-        if (session_status() == true)
-        {
-            session_unset();
-            session_destroy();
-            header("Location: \studio\index.php");
-        }
-        
-    }
-}
-
-$Logout = new Logout;
-$Logout->logout();
-
-echo "sair";
+    session_start();
+    header("Location: \studio\index.php");
+    session_destroy();
+    session_unset();
+?>
