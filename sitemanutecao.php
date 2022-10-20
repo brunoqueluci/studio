@@ -9,10 +9,16 @@
     <title>Studio | Sistema de Gereciamento</title>
 </head>
 <body>
+    
     <div class="alert alert-info" role="alert">
         <h3>Site em manutenção!</h3>
         <hr>
-        <h4>Sitema sendo criado, aguarde, em breve será finalizado.</h4>
+        <h4>Sistema sendo criado, aguarde, em breve será finalizado.</h4>
+        <h4>
+            <?php session_start();
+            echo "Usuario logado " . $_SESSION["nome"] . " Esta logado e seu id é " . $_SESSION["id"];
+            ?>
+        </h4>
      </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </body>
