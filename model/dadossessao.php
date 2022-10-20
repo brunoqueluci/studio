@@ -1,12 +1,12 @@
 <?php
-include("C:\wamp64\www\studio\controller\usuario\VerificaLogin.php");
+include("C:\wamp64\www\studio\controller\usuario\ConsultaUsuario.php");
 
-$VerificaLogin = new VerificaLogin;
+$ConsultaUsuario = new ConsultaUsuario;
 
-class dadossessao extends verificaLogin
+class dadossessao extends ConsultaUsuario
 {
     public function dadosSessao($dados)
     {
-         $this->verificaLogin($dados);
+         $this->consultaUsuario($dados);
     }
 }
