@@ -16,7 +16,7 @@ function login($ConsultaUsuario, $dadosLogin, $Sessao)
         $Sessao->dadosSessao($usuario);
         header("Location: \studio\home.php");
     } else {
-        header("Location: \studio\Errologin.php");
+        header("Location: \studio\View\Errologin.php");
     }
 }
 login($ConsultaUsuario, $dadosLogin, $Sessao);
