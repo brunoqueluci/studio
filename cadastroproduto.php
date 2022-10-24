@@ -19,16 +19,14 @@
 </div>
 <div class="container">
     <div class="col form-group">
-    <form method="POST" action="\studio\controller\login.php">
+    <form method="POST" action="\studio\controller\produto\Cadastro.php">
         <div class="row">
             <div class="col-2 align-self-center">
                 <div class="form-group">
-                    
                         <div class="form">
                             <label class="sr-only" for="inlineFormInputName2">Código</label>
                             <input type="text" class="form-control mb-2 mr-sm-2" id="codigo" name="codigo" placeholder="Código">
                         </div>
-                    
                 </div>
             </div>
             <div class="col-2">
@@ -47,7 +45,7 @@
         <div class="row">
             <div class="col-6 my-1">
                 <label class="sr-only py-1" for="inlineFormInputName2">Descrição do produto</label>
-                <input class="form-control" type="text" id="descricao_produto" name="descrica_produto" placeholder="Nome do produto">
+                <input class="form-control" type="text" id="descricao_produto" name="descricao_produto" placeholder="Nome do produto">
             </div>
         </div>
         <div class="row">
@@ -78,20 +76,25 @@
                 <input class="form-control" type="number" step="0.01" min="0.1" name="valor_custo" id="valor_custo">
             </div>
         </div>
-        <fieldset disabled="disabled">
+        
         <div class="row">
             <div class="col-2">
                 <label class="sr-only form-group" for="inlineFormInputName2">Quantidade Estoque</label>
-                <input class="form-control" type="number" step="0.01" min="0.1" name="qnt_estoque" id="qnt_estoque" placeholder="Estoque Atual">
+                <input class="form-control" type="number" step="0.01" min="0.1" name="estoque" id="estoque" placeholder="Estoque Atual">
             </div>
         </div>
-        </fieldset>
+       
         <div class="row">
             <div class="col-6 my-2">
                 <div class="form-group">
                     <label for="exempleFormControlTextarea1">Observação sobre o produto</label>
                     <textarea class="form-control" name="obs_produto" id="obs_produto" rows="3"></textarea>
                 </div>
+            </div>
+        </div>
+        <div class="row">
+            <div col-3>
+                <button class="btn btn-primary" type="submit">Cadastrar</button>
             </div>
         </div>
     </form>
