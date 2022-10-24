@@ -9,7 +9,7 @@ class GetDadosProduto
             'setor'=>$_POST['setor'],
             'valor_venda'=>$_POST['valor_venda'],
             'valor_custo'=>$_POST['valor_custo'],
-            'qnt_estoque'=>$_POST['qnt_estoque'],
+            'estoque'=>$_POST['estoque'],
             'obs_produto'=>$_POST['obs_produto']
         );
         return $dadosProduto;
