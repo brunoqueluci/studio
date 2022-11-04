@@ -12,7 +12,7 @@ class ConectaBd
             if(!$conexao):
                 echo("A conexão falhou: " . mysqli_connect_error($conexao));
             endif;
-            echo "Conectado com Sucesso!";
+            //echo "Conectado com Sucesso!";
         return $conexao;
     }
 }
