@@ -1,6 +1,15 @@
 <?php
-class GetDadosProduto
+require("C:\wamp64\www\studio\model\produto\CadastraProduto.php");
+
+class Produto
 {
+    public $modelProduto;
+
+    function __construct()
+    {
+        $this->modelProduto = new CadastraProduto;
+    }
+
     function getDadosProduto()
     {
         $dadosProduto = array(
@@ -13,5 +22,11 @@ class GetDadosProduto
             'obs_produto'=>$_POST['obs_produto']
         );
         return $dadosProduto;
+    }
+
+    function cadastro($dados)
+    {
+        // $valores = json_decode($dados);
+        $this->modelProduto->cadastraProduto($this->getDadosProduto($dados));
     }
 }

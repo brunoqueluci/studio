@@ -25,6 +25,5 @@ class CadastraProduto extends ConectaBd
              '".$dados['obs_produto']."')";
 
         $query = mysqli_query($this->dadosConexao(), $queryCadProd);
-
     }
 }
