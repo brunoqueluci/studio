@@ -6,3 +6,4 @@ $Produto = new Produto;
 // $CadastraProduto = new CadastraProduto;
 
 $Produto->cadastro($_POST);
+// header("Location: \studio\cadastroproduto.php");

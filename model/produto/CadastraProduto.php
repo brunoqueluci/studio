@@ -25,5 +25,11 @@ class CadastraProduto extends ConectaBd
              '".$dados['obs_produto']."')";
 
         $query = mysqli_query($this->dadosConexao(), $queryCadProd);
+
+        if ($query){
+            return "Cadastrado com sucesso!";
+        } else {
+            return "erro ao cadastrar um produto";
+        }
     }
 }

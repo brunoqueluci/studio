@@ -19,7 +19,7 @@
 </div>
 <div class="container">
     <div class="col form-group">
-    <form method="POST" action="\studio\controller\produto\Cadastro.php">
+    <form method="POST" id="cadastroproduto" action="\studio\controller\produto\Cadastro.php">
         <div class="row">
             <div class="col-2 align-self-center">
                 <div class="form-group">
@@ -103,6 +103,8 @@
 <?php require_once("C:\wamp64\www\studio\View\usuario\Footer.php");?>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 <script src="cadastroProduto.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script src="js\produto\cadastroProduto.js"></script>
 </body>
 </html>
 
